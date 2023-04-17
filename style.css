@@ -1,18 +1,62 @@
-body{
-    background-image: url(gif/EYKZJIYWoAENUIc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
+.animation{
+  position: relative;
+  animation-name: example;
 }
-.car {
-    width: 100px;
-    height: 100px;
-    animation-name: example;
-    animation-duration: 4s;
-    position: relative;
-    top: 900px;
-  }
-  @keyframes example {
-    0%   {left:0px; top:900px;}
-    100% {left:900px; top:900px;}
-  }
+.car{
+  position: absolute;
+  top: 1800px;
+  animation-name: car;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.fwheel{
+  position: absolute;
+  top: 2275px;
+  left: 1035px;
+  animation-name: fwheel;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.bwheel{
+  position: absolute;
+  top: 2270px;
+  left: 315px;
+  animation-name: bwheel;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.rod{
+  position: absolute;
+  z-index: 1;
+  left: 2000px;
+  top: 530px;
+}
+.blades{
+  position: absolute;
+  z-index: 1;
+  left: 1685px;
+  top: 320px;
+  animation-name: blades;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes car {
+  0%   {left:0px; top:1800px;}
+  100% {left:2400px; top:1800px;}
+}
+@keyframes fwheel {
+  0%   {left:1035px; top:2275px;}
+  100% {left:3435px; top:2275px;}
+  100% {transform: rotate(360deg);}
+}
+@keyframes bwheel {
+  0%   {left:315px; top:2270px}
+  100% {left:2715px; top:2270px}
+  100% {transform: rotate(360deg);}
+}
+@keyframes blades {
+  100% {transform: rotate(360deg);}
+}
